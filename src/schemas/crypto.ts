@@ -1620,7 +1620,7 @@ export const Currency = z.object({
         sats: z.number(),
       }),
       total_supply: z.number(),
-      max_supply: z.null(),
+      max_supply: z.number(),
       circulating_supply: z.number(),
       last_updated: z.string(),
     }),
