@@ -65,19 +65,29 @@ export default async function Exchange() {
             </div>
           </div>
                    
-          {exchanges.map((exchange: any)=>{
-            return (              
-              <Row 
-                key={exchange.id}
-                rank={exchange.trust_score_rank}
-                logo={exchange.image}
-                exchange={exchange.name}
-                score={exchange.trust_score}
-                volume={exchange.trade_volume_24h_btc}
-                normalized={exchange.trade_volume_24h_btc_normalized}
-              ></Row>
-            )
-          })}         
+          {exchanges.map(
+            ({
+              id,
+              trust_score_rank,
+              image,
+              name,
+              trust_score,
+              trade_volume_24h_btc,
+              trade_volume_24h_btc_normalized,
+            }) => {
+              return (
+                <Row
+                  key={id}
+                  rank={trust_score_rank}
+                  logo={image}
+                  exchange={name}
+                  score={trust_score}
+                  volume={trade_volume_24h_btc}
+                  normalized={trade_volume_24h_btc_normalized}
+                ></Row>
+              );
+            }
+          )}  
           
         </div>
         <div className='text-gray-400 mt-4 mb-8 mx-12 text-right max-lg:mx-4'>Powered by CoinGecko</div>
