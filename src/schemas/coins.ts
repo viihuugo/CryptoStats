@@ -3,7 +3,8 @@ import { z } from "zod";
 // API: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en
 // JSON to Zod: https://rsinohara.github.io/json-to-zod-react
 
-export const Coin = z.object({
+export const Coin = z.array(
+  z.object({
     id: z.string(),
     symbol: z.string(),
     name: z.string(),
@@ -30,4 +31,5 @@ export const Coin = z.object({
     atl_date: z.string(),
     roi: z.null(),
     last_updated: z.string(),
-  });
+  })
+);
