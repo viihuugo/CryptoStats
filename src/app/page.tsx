@@ -19,7 +19,7 @@ function Row ({coinlink, rank, logo, coin, symbol, price, priceChange, marketCap
       </div>
       <div className="col-span-4 max-md:col-span-1">
         <div className="w-full h-full text-gray-400 grid grid-cols-9 items-center max-xl:grid-cols-7 max-[920px]:grid-cols-5 max-md:grid-cols-3 max-[450px]:grid-cols-2">
-          { price < 0.01 ? <div className="text-right col-span-2">${price}</div> : <div className="text-right col-span-2">{price.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>}
+          { price < 0.01 ? <div className="text-right col-span-2 max-[450px]:pr-2">${price}</div> : <div className="text-right col-span-2 max-[450px]:pr-2">{price.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>}
           {priceChange < 0 ? <div className="text-right text-red-400 max-md:pr-2 max-[450px]:hidden">{priceChange.toFixed(2)}%</div> : <div className="text-right text-green-400 max-md:pr-2 max-[450px]:hidden">{priceChange.toFixed(2)}%</div>}
           <div className="text-right col-span-2 max-md:hidden max-[920px]:pr-2">{marketCap.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
           <div className="text-right col-span-2 max-xl:pr-2 max-[920px]:hidden">{volume.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
@@ -62,7 +62,7 @@ export default async function Home() {
             </div>
             <div className="col-span-4 max-md:col-span-1">
               <div className="w-full h-full text-gray-400 grid grid-cols-9 items-center max-xl:grid-cols-7 max-[920px]:grid-cols-5 max-md:grid-cols-3 max-[450px]:grid-cols-2">
-                <div className="text-right col-span-2">Price</div>
+                <div className="text-right col-span-2 max-[450px]:pr-2">Price</div>
                 <div className="text-right max-md:pr-2 max-[450px]:hidden">24h</div>
                 <div className="text-right col-span-2 max-[920px]:pr-2 max-md:hidden">Market Cap</div>
                 <div className="text-right col-span-2 max-xl:pr-2 max-[920px]:hidden">Volume 24h</div>

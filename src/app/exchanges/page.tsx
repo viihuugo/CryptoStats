@@ -18,7 +18,7 @@ function Row ({rank, logo, exchange, score, volume, normalized}: any){
       <div className="col-span-2">
         <div className="w-full h-full text-gray-400 grid grid-cols-3 items-center max-[920px]:grid-cols-2">
           { score > 7 ? <div className="text-right text-green-400">{score}</div> : <div className="text-right  text-yellow-400">{score}</div> }
-          <div className="text-right">{volume.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
+          <div className="text-right max-[450px]:pr-2">{volume.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
           <div className="text-right pr-2 max-[920px]:hidden">{normalized.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
         </div>
         
@@ -59,7 +59,7 @@ export default async function Exchange() {
             <div className="col-span-2">
               <div className="w-full h-full text-gray-400 grid grid-cols-3 items-center max-[920px]:grid-cols-2">
                 <div className="text-right">Trust Score</div>
-                <div className="text-right">24h Volume</div>
+                <div className="text-right max-[450px]:pr-2">24h Volume</div>
                 <div className="text-right pr-2 max-[920px]:hidden">24h Volume Normalized</div>
               </div>
             </div>
