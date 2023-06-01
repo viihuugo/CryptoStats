@@ -65,7 +65,7 @@ export default async function Home() {
                 <div className="text-right max-md:pr-2 max-[450px]:hidden">24h</div>
                 <div className="text-right col-span-2 max-[920px]:pr-2 max-md:hidden">Market Cap</div>
                 <div className="text-right col-span-2 max-xl:pr-2 max-[920px]:hidden">Volume 24h</div>
-                <div className="text-right col-span-2 pr-4 max-xl:hidden max-xl:col-span-0">Circulanting Supply</div>
+                <div className="text-right col-span-2 pr-4 max-xl:hidden max-xl:col-span-0">Circulating Supply</div>
               </div>
             </div>
           </div>
