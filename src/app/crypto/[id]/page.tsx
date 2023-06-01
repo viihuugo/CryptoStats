@@ -145,7 +145,7 @@ export default async function Crypto ({params}: any) {
                             </div>
                             <div className="flex justify-between mx-4 pt-2">
                                 <div className="text-gray-400 font-medium">24h Low / 24h High</div>
-                                <div className="text-white text-right">{high24.toLocaleString('en-US', {style: 'currency', currency: 'USD',})} / {low24.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
+                                <div className="text-white text-right">{low24.toLocaleString('en-US', {style: 'currency', currency: 'USD',})} / {high24.toLocaleString('en-US', {style: 'currency', currency: 'USD',})}</div>
                             </div>
                             <div className="flex justify-between mx-4 pt-2">
                                 <div className="text-gray-400 font-medium">Total Supply</div>
