@@ -10,7 +10,6 @@ export default async function Crypto ({params}: any) {
     const page = params.id;
     const coin = await coinData(page); 
 
-
     return (
         <>
             <div className="overflow-x-hidden">
@@ -82,16 +81,13 @@ export default async function Crypto ({params}: any) {
 
                     </div>
 
-
                     <div className="h-full w-full col-span-2 overflow-hidden">
                         <div className="h-[180px] rounded-[10px] ml-12 bg-[#3D3D3D] max-lg:ml-0">
                             <div className="text-white text-xl font-semibold mx-4 pt-4">{coin.name} Converter</div>                            
                             <Calculator mult={coin.price} sym={coin.symbol.toUpperCase()}/>
                             <div className="text-gray-400 font-medium mx-4 mt-2 text-sm">1 USD = {(1 / coin.price)} {coin.symbol.toUpperCase()}</div>
-                        </div>
+                        </div>                      
                        
-                       
-
                         <div className=" rounded-[10px] ml-12 mt-4 bg-[#3D3D3D] max-lg:ml-0">
                             <div className="flex justify-between mx-4 pt-4">
                                 <div className="text-gray-400 font-medium">Website</div>
@@ -158,7 +154,7 @@ export default async function Crypto ({params}: any) {
                         </div>
                     </div>
                 </div>
-            <Footer/>
+                <Footer/>
             </div>
         </>
     )
