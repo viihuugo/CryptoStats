@@ -50,7 +50,7 @@ export default async function Home() {
         {/* @ts-expect-error Async Server Component */}
         <Navbar/>
         <div className='pl-12 max-lg:pl-4'>
-          <div className="text-3xl text-white font-medium mt-8 max-md:text-2xl">Today&aposs Cryptocurrency Prices by Market Cap</div>
+          <div className="text-3xl text-white font-medium mt-8 max-md:text-2xl">Cryptocurrency Prices by Market Cap</div>
           <div className="text-gray-400 mt-2">The global cryptocurrency market cap today is ${(marketcap / 1000000000000).toFixed(2)} Trillion</div>
         </div>
         <div>
