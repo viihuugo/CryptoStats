@@ -10,6 +10,7 @@ export default async function Crypto ({params}: any) {
     const page = params.id;
     const coin = await coinData(page); 
 
+
     return (
         <>
             <div className="overflow-x-hidden">
@@ -94,7 +95,7 @@ export default async function Crypto ({params}: any) {
                         <div className=" rounded-[10px] ml-12 mt-4 bg-[#3D3D3D] max-lg:ml-0">
                             <div className="flex justify-between mx-4 pt-4">
                                 <div className="text-gray-400 font-medium">Website</div>
-                                <div className="bg-[#686873] px-2 py-1 rounded-[10px] hover:bg-[#47474f]"><a href={coin.site} className="text-white hover:text-green-400">{coin.domain}</a></div>
+                                <div className="bg-[#686873] px-2 py-1 rounded-[10px] hover:bg-[#47474f]"><a href={coin.site} className="text-white cursor-pointer hover:text-green-400">{coin.domain}</a></div>
                             </div>
                             <div className="flex justify-between mx-4 pt-2">
                                 <div className="text-gray-400 font-medium">Categories</div>

@@ -73,6 +73,7 @@ export async function coinData(crypto: any): Promise<any> {
         yearChangePerc,
         totalSupply,
         maxSupply,
+        site,
         domain
     }
 
